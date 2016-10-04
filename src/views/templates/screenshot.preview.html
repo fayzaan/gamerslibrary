@@ -1,0 +1,19 @@
+<div>
+	<h4>Screenshots</h4>
+	<img src="https://res.cloudinary.com/igdb/image/upload/{{selected.cloudinary_id}}.jpg" style="width:100%" />
+	
+	<div class="media-gl-thumbnails">
+		<nav>
+			<ul>
+				<li data-ng-repeat="screenshot in screenshots track by $index" data-ng-click="selectImage(screenshot)" class="gl-link">
+					<img class="media-object" data-ng-class="{'media-object-active': selected.cloudinary_id == screenshot.cloudinary_id}" src="https://res.cloudinary.com/igdb/image/upload/c_thumb/{{screenshot.cloudinary_id}}.jpg" style="height:100px;" />
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- <div class="media media-gl" data-ng-repeat="screenshot in screenshots track by $index" data-ng-click="selectImage(screenshot)">
+		<div class="media-left">
+			<img class="media-object" data-ng-class="{'media-object-active': selected.cloudinary_id == screenshot.cloudinary_id}" src="https://res.cloudinary.com/igdb/image/upload/c_thumb/{{screenshot.cloudinary_id}}.jpg" style="width:150px;" />
+		</div>
+	</div> -->
+</div>

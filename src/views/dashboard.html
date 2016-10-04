@@ -1,0 +1,20 @@
+<div data-ng-controller="dashboard" class="gl-main-container">
+	<div data-navbar></div>
+
+	<div class="jumbotron jumbotron-gl">
+		<div class="carousel">
+			<div class="item">
+				<a href="/#/game/{{games[0].slug}}">
+					<img src="https://res.cloudinary.com/igdb/image/upload/{{games[0].screenshots[0].cloudinary_id}}" width="100%" />
+				</a>
+				<div class="carousel-caption">
+					<h4>{{games[0].name}}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div data-games-slide-show games="games"></div>
+	</div>
+</div>

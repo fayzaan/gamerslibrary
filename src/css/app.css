@@ -1,0 +1,148 @@
+img.cover-high {
+	width: 200px;
+}
+
+img.cover-wide {
+	height: 200px;
+}
+
+div.thumbnail {
+	border: none;
+}
+
+.modal-backdrop {
+	opacity: .3;
+}
+
+.gl-main-container {
+	margin-top: 50px;
+	background-color: #7b7b7b;
+}
+
+.gl-container {
+	padding-top: 80px;
+	background: #fff;
+}
+
+.navbar-gl {
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0px;
+}
+
+.jumbotron-gl {
+	max-width: 1920px;
+	background: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	background: #1D222a;
+}
+
+.jumbotron-gl p {
+	font-size: 14px;
+}
+
+.games-table {
+	max-width: 200px;
+	display: inline-block;
+	height: 200px;
+}
+
+.games-table > .thumbnail {
+	overflow: hidden;
+	margin: 5px;
+}
+
+.thumbnail > .cover-wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	height: 170px;
+}
+
+.gl-game-link {
+	background: none;
+}
+
+.gl-game-item {
+	background-color: rgba(0,0,0,0.65);
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAAAKCAQAAACTHTN8AAAAbElEQVRYw+2R0QrAIAhF3f7/L/cd2ra2QsPocQzOCbsqocTd5JBSj7xaJnV2njd6hdXMnFqo79CemXszdtVNinPaXZJK+55xa+uudfXPmHuVSRYju+eaVZVd4GdgGZYBlgGWYRlgGWAZlsG3nMPhqxXZYOE8AAAAAElFTkSuQmCC);
+	background-position: left top;
+	background-repeat: repeat-y;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a.list-group-item.gl-game-link:hover,
+a.list-group-item.gl-game-link:hover {
+	color: #fff;
+	background: none;
+}
+
+a.list-group-item .gl-game-item-heading {
+	color: #fff;
+}
+
+.gl-game-link p {
+	color: #fff;
+}
+
+.game-background {
+	background: #2b2d31 center center;
+	background-size: cover;
+	box-shadow: rgba(255,255,255,0.25) 0 1px 0 inset,rgba(0,0,0,0.4) 0 -1px 0 inset;
+	position: relative;
+}
+
+.details-caption {
+	left: 5%;
+	right: 5%;
+	top: 0px;
+	text-align: left;
+}
+
+.details-caption img {
+	margin-right: 20px;
+}
+
+.details-img-wrapper {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+
+.media-gl {
+	display: inline-block;
+}
+
+.media-object-active {
+	border: 2px solid #31708f;
+}
+
+.media-gl-thumbnails {
+	margin-top: 15px;
+}
+
+.media-gl-thumbnails nav {
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.media-gl-thumbnails nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	white-space: nowrap;
+}
+
+.media-gl-thumbnails nav ul li {
+	display: table-cell;
+}
+
+.gl-link {
+	cursor: pointer;
+}

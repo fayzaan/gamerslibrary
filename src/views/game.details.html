@@ -1,0 +1,107 @@
+<div data-ng-controller="gameDetails" class="gl-main-container">
+	<div data-navbar>
+		<li class="active"><a>{{game.name}}</a></li>
+	</div>
+	<div>
+		<div class="jumbotron jumbotron-gl">
+			<div class="carousel">
+				<div class="item">
+					<div class="details-img-wrapper">
+						<img data-ng-if="gameBg" src="{{gameBg}}" width="100%" />
+					</div>
+					<div class="carousel-caption details-caption">
+						<img class="pull-left" src="https://res.cloudinary.com/igdb/image/upload/t_cover_small_2x/{{game.cover.cloudinary_id}}.jpg" />
+						<h4>{{game.name}}</h4>
+						<p>
+							<span data-ng-show="!isReleased(game.release_dates[ 0 ].date)">Coming </span>
+							<span data-ng-show="isReleased(game.release_dates[ 0 ].date)">Released </span>
+							{{game.release_dates[ 0 ].date | date}}
+						</p>
+						<p>
+							<span data-ng-repeat="platform in platforms track by $index">
+								{{formatPlatform(platform)}}<span data-ng-if="$index < platforms.length-1">, </span>
+							</span>
+						</p>
+						<label data-ng-show="game.rating" class="label {{getRatingStyle(game.rating)}}">{{game.rating | number:2}} %</label>
+						<label data-ng-show="!game.rating" class="label label-info">{{game.hypes}} HYPES</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container gl-container">
+			<div class="col-xs-9">
+				<div data-ng-if="game.summary">
+					<h4>Summary</h4>
+					<p>{{game.summary}}</p>
+				</div>
+
+				<br />
+
+				<div data-screenshot-preview
+					 data-ng-if="exists(game.screenshots)"
+					 data-screenshots="game.screenshots">
+				</div>
+
+				<br />
+
+				<div data-video-preview
+					 data-ng-if="exists(game.videos)"
+					 data-videos="game.videos">
+				</div>
+
+				<br />
+
+				<h4>Comments</h4>
+
+				<div data-comments-board
+					 data-ng-if="game.id"
+					 data-comments="_comments"
+					 data-slug="game.slug"
+					 data-name="game.name"
+					 data-gameid="game.id">
+				</div>
+
+			</div>
+
+			<div class="col-sm-3">
+				<label data-ng-show="game.release_dates">Release Date</label>
+				<p>{{game.release_dates[ 0 ].date | date}}</p>
+				<label data-ng-show="game.developers">Developers</label>
+				<p data-ng-repeat="dev in game.developers track by $index">
+					{{companies[ dev ].name}}
+				</p>
+				<label data-ng-show="game.publishers">Publishers</label>
+				<p data-ng-repeat="pub in game.publishers track by $index">
+					{{companies[ pub ].name}}
+				</p>
+				<label data-ng-show="game.genres">Genre</label>
+				<p>
+					<span data-ng-repeat="genre in game.genres track by $index">{{genres[ genre ].name}}<span data-ng-show="$index < game.genres.length - 1">,</span> </span>
+				</p>
+				<label data-ng-show="game.themes">Themes</label>
+				<p>
+					<span data-ng-repeat="theme in game.themes track by $index">{{themes[ theme ].name}}<span data-ng-show="$index < game.themes.length - 1">,</span> </span>
+				</p>
+
+				<label>Suggestions</label>
+				<ul class="list-group" style="list-style:none;">
+					<li data-ng-repeat="g in suggestions track by $index" data-ng-if="$index < 5" class="game-background" style="background:url('https://res.cloudinary.com/igdb/image/upload/c_thumb/{{g.screenshots[0].cloudinary_id}}.jpg')">
+						<div class="gl-game-item">
+							<a href="/#/game/{{g.slug}}" class="list-group-item gl-game-link">
+								<h4 class="list-group-item-heading gl-game-item-heading">{{g.name}}</h4>
+								<p class="list-group-item-text">
+									<span data-ng-show="g.release_dates">
+										<span data-ng-show="!isReleased(g.release_dates[ 0 ].date)">Coming </span>
+										<span data-ng-show="isReleased(g.release_dates[ 0 ].date)">Released </span>
+										{{g.release_dates[ 0 ].date | date}}
+									</span>
+								</p>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

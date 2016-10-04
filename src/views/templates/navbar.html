@@ -1,0 +1,25 @@
+<div class="navbar navbar-inverse navbar-gl navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand">GL</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Dashboard</a></li>
+			</ul>
+			<ul class="nav navbar-nav" data-ng-transclude></ul>
+			<div class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search..." data-ng-model="selectedGame" data-bs-typeahead data-bs-options="game.slug as game.name for game in typeahead($viewValue)" data-bs-on-select="goTo" />
+				</div>
+				<div class="form-group" data-ng-show="!user._id">
+					<button type="button" class="btn btn-primary" data-ng-click="makeUser()"><i class="fa fa-user fa-lg"></i></button>
+				</div>
+				<div data-ng-show="user._id" class="form-group">
+					{{user.username}}
+					<button type="button" class="btn btn-default" data-ng-click="logout()">Logout</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

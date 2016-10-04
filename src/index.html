@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+		<title>Gamers Library</title>
+		<meta name="description" content="A library for gamers">
+		<meta name="author" content="authors.txt">
+
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/app.css">
+
+	</head>
+
+	<body data-ng-controller="AppCtrl">
+		<div class="page">
+			<div class="wrapper">
+				<div class="view" data-ng-view></div>
+				<div class="footer-push"></div>
+			</div>
+
+			<div class="footer" data-ng-include="views/footer.html"></div>
+		</div>
+
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angular-cookies/angular-cookies.js"></script>
+		<script src="node_modules/angular-route/angular-route.js"></script>
+
+		<script src="scripts/app.common.js"></script>
+		<script src="scripts/app.route.js"></script>
+
+		<script src="scripts/controllers/app.js"></script>
+		<script src="scripts/controllers/game.details.js"></script>
+		<script src="scripts/controllers/dashboard.js"></script>
+
+		<script src="scripts/factories/session.js"></script>
+		<script src="scripts/factories/api.users.js"></script>
+		<script src="scripts/factories/api.games.js"></script>
+		<script src="scripts/factories/api.companies.js"></script>
+		<script src="scripts/factories/api.platforms.js"></script>
+		<script src="scripts/factories/api.genres.js"></script>
+		<script src="scripts/factories/api.themes.js"></script>
+		<script src="scripts/factories/api.perspectives.js"></script>
+		<script src="scripts/factories/api.comments.js"></script>
+
+		<script src="scripts/factories/make.user.js"></script>
+
+		<script src="scripts/directives/navbar.js"></script>
+		<script src="scripts/directives/games.slideshow.js"></script>
+		<script src="scripts/directives/screenshots.js"></script>
+		<script src="scripts/directives/video.preview.js"></script>
+		<script src="scripts/directives/comments.board.js"></script>
+
+		<script src="scripts/app.run.js"></script>
+
+		<script src="node_modules/angular-strap/dist/angular-strap.js"></script>
+		<script src="node_modules/angular-strap/dist/angular-strap.tpl.js"></script>
+
+	</body>
+</html>	

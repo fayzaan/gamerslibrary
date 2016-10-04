@@ -1,0 +1,14 @@
+<div style="text-align:center;">
+	<div data-ng-repeat="game in games" class="games-table">
+		<div class="thumbnail">
+			<div class="cover-wrapper">
+				<img data-ng-class="{'cover-high': game.cover.height > game.cover.width, 'cover-wide': game.cover.width > game.cover.height}" src="https://res.cloudinary.com/igdb/image/upload/t_cover_big_2x/{{game.cover.cloudinary_id}}.jpg"/>
+			</div>
+			<div class="caption">
+				<label style="white-space: nowrap; width:100%; overflow: hidden; text-overflow: ellipsis;">{{game.name}}</label>
+				<p style="white-space: nowrap; width:100%; overflow: hidden; text-overflow: ellipsis;">{{genres[ game.genres[ 0 ] ].name}}&nbsp;</p>
+				<p><a href="#/game/{{game.slug}}" class="btn btn-primary" role="button" >Details</a></p>
+			</div>
+		</div>
+	</div>
+</div>

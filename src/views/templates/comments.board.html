@@ -1,0 +1,30 @@
+<div class="col-sm-12">
+	<div data-ng-if="!comments || !comments.length">
+		There are no comments for this game.
+	</div>
+
+	<div>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<textarea class="form-control" data-ng-model="form.comment" rows="5"></textarea>
+				<br />
+				<button type="button" class="btn btn-primary" data-ng-click="saveComment()">Post Comment</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div data-ng-repeat="comment in comments track by $index" class="media">
+		<div class="media-left media-top">
+			<a href="#">
+				<!-- <img class="media-object" src="..." alt="..."> -->
+				<i class="fa fa-user fa-2x"></i>
+			</a>
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading">{{comment.postedBy.username}} <span class="badge">{{comment.createdAt | date }}</span></h4>
+			<p>{{comment.comment}}</p>
+		</div>
+		<hr />
+	</div>
+</div>

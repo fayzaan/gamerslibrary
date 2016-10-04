@@ -1,0 +1,20 @@
+{
+  "name": "gamerslibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammed Faizan Qureshi <mohammed.qureshi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-strap": "^2.3.9",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
+}
